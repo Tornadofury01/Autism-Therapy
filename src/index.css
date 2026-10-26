@@ -1,0 +1,321 @@
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Atkinson Hyperlegible", "Segoe UI", sans-serif;
+  --color-cream: #f3efe8;
+  --color-cream-deep: #e4dcd0;
+  --color-paper: #fbf9f6;
+  --color-ink: #1c2830;
+  --color-ink-soft: #3e4e58;
+  --color-muted: #4a5962;
+  --color-line: #ddd4c8;
+  --color-blue: #234854;
+  --color-blue-deep: #1a3640;
+  --color-blue-soft: #e3eef2;
+  --color-green: #1f5c45;
+  --color-green-soft: #e3f0e9;
+  --color-sand: #efe6da;
+  --color-rose: #7c3c3a;
+  --color-rose-soft: #f6ebe8;
+  --color-rose-deep: #f3e3df;
+  --color-on-blue: #ffffff;
+  --color-canvas: #d9e6eb;
+  --color-floor: #e6d8c8;
+  --color-wood: #c4b5a4;
+  --color-leaf: #3f6b58;
+  --color-leaf-light: #5e8a74;
+  --color-sun: #e7d3a1;
+  --color-window: #f7fbfc;
+}
+
+html[data-scheme="cool"] {
+  --color-cream: #e8eef1;
+  --color-cream-deep: #d4e0e6;
+  --color-paper: #f5f8fa;
+  --color-ink: #1a2c36;
+  --color-ink-soft: #3a5160;
+  --color-muted: #4d6572;
+  --color-line: #cfd9e0;
+  --color-blue: #1d4e66;
+  --color-blue-deep: #153a4c;
+  --color-blue-soft: #d6e6ef;
+  --color-green: #1c5c4c;
+  --color-green-soft: #dceee6;
+  --color-sand: #e3ebf0;
+  --color-rose: #7a403e;
+  --color-rose-soft: #f4e8e6;
+  --color-rose-deep: #eddcd8;
+  --color-on-blue: #ffffff;
+  --color-canvas: #d4e4ec;
+  --color-floor: #d5ddd4;
+  --color-wood: #b7c3c0;
+  --color-leaf: #2f6a62;
+  --color-leaf-light: #5d9086;
+  --color-sun: #e4d7b0;
+  --color-window: #f4fafc;
+}
+
+html[data-scheme="green"] {
+  --color-cream: #e7efe6;
+  --color-cream-deep: #d3e0d2;
+  --color-paper: #f6faf5;
+  --color-ink: #1c2e24;
+  --color-ink-soft: #3e5646;
+  --color-muted: #516858;
+  --color-line: #d0ddd0;
+  --color-blue: #245c45;
+  --color-blue-deep: #1a4534;
+  --color-blue-soft: #dceadf;
+  --color-green: #1f5c45;
+  --color-green-soft: #d7eddf;
+  --color-sand: #e4eee4;
+  --color-rose: #7a403e;
+  --color-rose-soft: #f4e8e6;
+  --color-rose-deep: #eddcd8;
+  --color-on-blue: #ffffff;
+  --color-canvas: #d5e6da;
+  --color-floor: #ddd4c4;
+  --color-wood: #c4b59a;
+  --color-leaf: #2f6b4e;
+  --color-leaf-light: #5e8a6e;
+  --color-sun: #e6d4a4;
+  --color-window: #f7fbf8;
+}
+
+html[data-scheme="dark"] {
+  color-scheme: dark;
+  --color-cream: #1b2428;
+  --color-cream-deep: #141c20;
+  --color-paper: #243034;
+  --color-ink: #f3efe6;
+  --color-ink-soft: #d5ddd6;
+  --color-muted: #c5d0c8;
+  --color-line: #3c4c52;
+  --color-blue: #c5dde4;
+  --color-blue-deep: #a9cdd6;
+  --color-blue-soft: #2c4148;
+  --color-green: #8fbfa8;
+  --color-green-soft: #243832;
+  --color-sand: #2e3834;
+  --color-rose: #e7b2ac;
+  --color-rose-soft: #3a2c2a;
+  --color-rose-deep: #4a3532;
+  --color-on-blue: #142026;
+  --color-canvas: #24343c;
+  --color-floor: #3a322c;
+  --color-wood: #6a5c50;
+  --color-leaf: #7eaa96;
+  --color-leaf-light: #a3c4b2;
+  --color-sun: #d4c49a;
+  --color-window: #d7e4ea;
+}
+
+html {
+  color-scheme: light;
+  background: var(--color-cream);
+  scroll-padding-top: 5.5rem;
+  overflow-x: clip;
+}
+
+body {
+  margin: 0;
+  min-height: 100dvh;
+  background: var(--color-cream);
+  color: var(--color-ink);
+  font-family: "Atkinson Hyperlegible", "Segoe UI", sans-serif;
+  font-size: 1.25rem;
+  line-height: 1.5;
+  overflow-x: clip;
+}
+
+#root {
+  min-height: 100dvh;
+}
+
+button,
+input {
+  font: inherit;
+}
+
+button,
+a {
+  touch-action: manipulation;
+}
+
+button:not([aria-disabled="true"]),
+a {
+  cursor: pointer;
+}
+
+:focus-visible {
+  outline: 3px solid var(--color-ink);
+  outline-offset: 3px;
+}
+
+::placeholder {
+  color: var(--color-muted);
+  opacity: 1;
+}
+
+::selection {
+  background: var(--color-blue-soft);
+  color: var(--color-ink);
+}
+
+.skip-link {
+  position: absolute;
+  left: 1rem;
+  top: 1rem;
+  z-index: 60;
+  transform: translateY(-200%);
+  border-radius: 1rem;
+  background: var(--color-paper);
+  color: var(--color-ink);
+  padding: 1rem 1.25rem;
+  font-weight: 700;
+}
+
+.skip-link:focus {
+  transform: none;
+}
+
+@keyframes fade-slide {
+  from {
+    opacity: 0;
+    transform: translateY(12px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fade-in {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.animate-screen {
+  animation: fade-slide 360ms ease-out backwards;
+}
+
+.animate-fade {
+  animation: fade-in 360ms ease-out;
+}
+
+.thinking-dots {
+  display: inline-flex;
+  gap: 0.4rem;
+  padding: 0.35rem 0.1rem;
+}
+
+.thinking-dots span {
+  width: 0.55rem;
+  height: 0.55rem;
+  border-radius: 999px;
+  background: var(--color-blue);
+  opacity: 0.35;
+  animation: soft-dot 1.2s ease-in-out infinite;
+}
+
+.thinking-dots span:nth-child(2) {
+  animation-delay: 0.2s;
+}
+
+.thinking-dots span:nth-child(3) {
+  animation-delay: 0.4s;
+}
+
+@keyframes soft-dot {
+  0%,
+  100% {
+    opacity: 0.3;
+  }
+  50% {
+    opacity: 1;
+  }
+}
+
+.talk-live {
+  animation: talk-ring 1.6s ease-out infinite;
+}
+
+@keyframes talk-ring {
+  0% {
+    box-shadow: 0 0 0 0 color-mix(in srgb, var(--color-blue) 28%, transparent);
+  }
+  100% {
+    box-shadow: 0 0 0 14px color-mix(in srgb, var(--color-blue) 0%, transparent);
+  }
+}
+
+.wave-bars {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.2rem;
+  height: 1.25rem;
+}
+
+.wave-bars span {
+  display: block;
+  width: 0.28rem;
+  height: 0.45rem;
+  border-radius: 999px;
+  background: currentColor;
+  animation: wave-bar 1.2s ease-in-out infinite;
+}
+
+.wave-bars span:nth-child(2) {
+  animation-delay: 0.15s;
+}
+
+.wave-bars span:nth-child(3) {
+  animation-delay: 0.3s;
+}
+
+.wave-bars span:nth-child(4) {
+  animation-delay: 0.45s;
+}
+
+@keyframes wave-bar {
+  0%,
+  100% {
+    height: 0.4rem;
+    opacity: 0.45;
+  }
+  50% {
+    height: 1.15rem;
+    opacity: 1;
+  }
+}
+
+.speaker-live {
+  animation: soft-dot 1.2s ease-in-out infinite;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .animate-screen,
+  .animate-fade {
+    animation: none;
+  }
+
+  .thinking-dots span {
+    animation: none;
+    opacity: 0.8;
+  }
+
+  .talk-live,
+  .wave-bars span,
+  .speaker-live {
+    animation: none;
+  }
+
+  .wave-bars span {
+    height: 0.8rem;
+    opacity: 0.8;
+  }
+}
