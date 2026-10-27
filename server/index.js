@@ -213,7 +213,7 @@ if (process.env.NODE_ENV === "production") {
 }
 
 const server = app.listen(PORT, () => {
-  console.log(`Practice Visit is running at http://localhost:${PORT}`);
+  console.log(`Zien is running at http://localhost:${PORT}`);
 });
 
 server.on("error", (error) => {

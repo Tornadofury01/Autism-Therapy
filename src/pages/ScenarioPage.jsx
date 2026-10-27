@@ -5,16 +5,16 @@ import scenarios from "../data/scenarios";
 
 const comingSoon = [
   {
-    id: "food",
-    title: "Ordering Food",
-    description: "See a counter and how to order.",
-    icon: "utensils",
+    id: "dental",
+    title: "Dental office",
+    description: "See a checkup before you go.",
+    icon: "tooth",
   },
   {
-    id: "haircut",
-    title: "Haircut",
-    description: "See a salon chair and a haircut.",
-    icon: "scissors",
+    id: "party",
+    title: "Birthday party",
+    description: "See a party before you go.",
+    icon: "party",
   },
 ];
 
@@ -24,7 +24,7 @@ export function ScenarioPage() {
   return (
     <Screen backTo="/" title="Choose a place">
       <h1 className="text-4xl font-bold tracking-tight">Choose a place</h1>
-      <p className="mt-3 max-w-2xl text-xl text-ink-soft">Pick one visit to practice.</p>
+      <p className="mt-3 max-w-2xl text-xl text-ink-soft">Pick one place.</p>
 
       <ul className="mt-8 grid grid-cols-1 gap-4 md:grid-cols-2">
         {ready.map((place) => {
@@ -42,18 +42,9 @@ export function ScenarioPage() {
                   </span>
                   <span>
                     <span className="block text-2xl font-bold">{place.title}</span>
-                    <span className="mt-2 block text-lg">{place.description}</span>
+                    <span className="mt-1 block text-lg text-ink-soft">{place.description}</span>
                   </span>
                 </span>
-                {(place.details || []).length > 0 && (
-                  <span className="mt-4 block space-y-2">
-                    {place.details.map((line) => (
-                      <span key={line} className="block text-lg text-ink-soft">
-                        {line}
-                      </span>
-                    ))}
-                  </span>
-                )}
               </Link>
             </li>
           );

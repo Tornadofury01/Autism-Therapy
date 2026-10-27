@@ -377,7 +377,7 @@ export function AskPage({ scenario }) {
         {about}
       </p>
       <p className="mt-2 max-w-3xl text-lg text-ink-soft">
-        Answers are for this practice visit. A grown-up can help with real questions.
+        Answers are for this visit in Zien. A grown-up can help with real questions.
       </p>
 
       <div className="mt-6 max-w-xl">

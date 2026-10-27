@@ -8,7 +8,7 @@ export function GrownupsPage() {
         <section>
           <h2 className="text-2xl font-bold">What this is</h2>
           <p className="mt-2">
-            Practice Visit lets a child look at a place before the real visit. Two places are ready: the Texas State Capitol, and a Washington, DC trip. The DC videos are there to help a child get used to public transport and find the way around the city, from the Metro ride to walking between the monuments. Other places are not ready yet.
+            Zien lets a child look at a place before the real visit. Two places are ready: the Texas State Capitol, and a Washington, DC trip. The DC videos help a child get used to public transport and find the way around the city. A dental office and a birthday party are not ready yet.
           </p>
         </section>
         <section>

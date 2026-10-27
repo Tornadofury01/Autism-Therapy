@@ -1,11 +1,10 @@
 import { Link } from "react-router-dom";
-import { HomeArt } from "../components/Illustrations";
 import { IconDoor, IconPeople } from "../components/Icons";
 import { PrimaryButton } from "../components/Buttons";
 import { usePageTitle } from "../hooks/usePageTitle";
 
 export function HomePage() {
-  usePageTitle("Home");
+  usePageTitle();
 
   return (
     <div className="flex min-h-dvh flex-col items-center justify-center px-6 pt-16 pb-28">
@@ -14,22 +13,17 @@ export function HomePage() {
         tabIndex={-1}
         className="flex w-full max-w-xl flex-col items-center gap-8 text-center outline-none"
       >
-        <div className="flex flex-col items-center gap-4">
-          <span className="flex h-16 w-16 items-center justify-center rounded-2xl bg-blue-soft text-blue">
-            <IconDoor className="h-8 w-8" />
-          </span>
-          <div>
-            <h1 className="text-4xl font-bold tracking-tight sm:text-5xl">Practice Visit</h1>
-            <p className="mt-3 text-xl text-ink-soft">See a place before you visit it.</p>
-          </div>
+        <div className="flex flex-col items-center gap-2">
+          <h1>
+            <img src="/zien-logo.png" alt="Zien" className="mx-auto h-auto w-64 sm:w-80" />
+          </h1>
+          <p className="text-xl text-ink-soft">See a place before you visit it.</p>
         </div>
-
-        <HomeArt />
 
         <div className="flex w-full max-w-md flex-col items-center gap-2">
           <PrimaryButton to="/scenarios" data-testid="start">
             <IconDoor />
-            Start a Practice Visit
+            Choose a place
           </PrimaryButton>
           <Link
             to="/grownups"

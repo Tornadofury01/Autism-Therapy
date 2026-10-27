@@ -2,11 +2,7 @@ const scenarios = {
   capitol: {
     id: "capitol",
     title: "Texas State Capitol",
-    description: "A short practice look at the Texas State Capitol before a real visit.",
-    details: [
-      "Three parts: the outside, a quiet room, and the dome.",
-      "Nothing starts until a child taps play.",
-    ],
+    description: "The outside, a quiet room, and the dome.",
     icon: "door",
     intro: "You will watch three short parts of the Texas State Capitol in Austin.",
     practiceTitle: "Practice talking at the Capitol",
@@ -73,13 +69,7 @@ const scenarios = {
   dc: {
     id: "dc",
     title: "Washington, DC",
-    description: "Get used to public transport and finding the way around Washington, DC.",
-    details: [
-      "The point of these videos is to practice the Metro and walking between places, before the real day.",
-      "You start at Reston Station, ride the train, and come up out of the station in the city.",
-      "Then you walk outside to the White House, the Washington Monument, the water by the Jefferson Memorial, and the United States Capitol.",
-      "At the end, you board the Metro at Capitol South, the station nearest the Capitol, and ride back toward Reston.",
-    ],
+    description: "Ride the Metro and walk around the monuments.",
     icon: "train",
     intro: "These parts show how to take public transport and find your way around Washington, DC.",
     introParagraphs: [
@@ -290,7 +280,7 @@ const scenarios = {
       },
     ],
     generalFacts: [
-      "This practice visit is for getting used to public transport and finding the way around Washington, DC",
+      "This visit is for getting used to public transport and finding the way around Washington, DC",
       "The trip starts at Reston Station, rides the Metro, comes up from the station, and then walks outside between monuments",
       "Places seen from outside include the White House, the Washington Monument, a view toward the Lincoln Memorial, the water by the Jefferson Memorial, and the United States Capitol",
       "The White House is a white building where the president of the United States lives and works. In this video, people stay outside the fence",

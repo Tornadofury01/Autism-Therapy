@@ -164,6 +164,17 @@ export function IconUtensils({ className }) {
   );
 }
 
+export function IconParty({ className }) {
+  return (
+    <Svg className={className}>
+      <path d="M5.5 13.5h13v5a1 1 0 0 1-1 1h-11a1 1 0 0 1-1-1z" />
+      <path d="M5.5 13.5c1.3-1.5 2.6-1.5 3.9 0s2.6 1.5 3.9 0 2.6-1.5 3.9 0" />
+      <path d="M12 9.2V12" />
+      <path d="M12 5.2c.7.9.7 1.8 0 2.6-.7-.8-.7-1.7 0-2.6z" />
+    </Svg>
+  );
+}
+
 export function IconScissors({ className }) {
   return (
     <Svg className={className}>
@@ -288,6 +299,7 @@ export const icons = {
   chair: IconChair,
   mask: IconMask,
   tooth: IconTooth,
+  party: IconParty,
   utensils: IconUtensils,
   scissors: IconScissors,
   clipboard: IconClipboard,
